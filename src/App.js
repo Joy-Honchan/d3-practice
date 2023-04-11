@@ -17,7 +17,7 @@ export default function App() {
       ) : now === 2 ? (
         <Pie width="200" />
       ) : now === 3 ? (
-        <LineChart width="500" height="200" />
+        <LineChart width="350" height="200" />
       ) : (
         <Smile />
       )}

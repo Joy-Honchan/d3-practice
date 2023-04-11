@@ -1,0 +1,12 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.btn-panel {
+  margin-bottom: 15px;
+}
+
+.btn-panel > button {
+  margin-right: 5px;
+}

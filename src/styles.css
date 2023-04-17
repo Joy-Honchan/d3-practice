@@ -10,3 +10,8 @@
 .btn-panel > button {
   margin-right: 5px;
 }
+
+.x-axis-title {
+  text-anchor: middle;
+  font-weight: 600;
+}

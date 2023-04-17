@@ -23,6 +23,17 @@ export default function LineChart({ width, height }) {
     .domain([0, max(csvData || [], (d) => d.Population)])
     .range([0, innerWidth]);
 
+  const tickFormat = (num) => {
+    const parsedN = format(".2s")(num);
+    if (parsedN.indexOf("00M") !== -1) {
+      return parsedN.replace("00M", "億");
+    }
+    if (parsedN.indexOf("G") !== -1) {
+      return parsedN.replace(".", "").replace("G", "億");
+    }
+    return parsedN.replace(".0", "");
+  };
+
   if (!csvData) {
     return null;
   }
@@ -33,7 +44,7 @@ export default function LineChart({ width, height }) {
         <XBottom
           xScale={xScale}
           innerHeight={innerHeight}
-          tickFormat={format(".2s")}
+          tickFormat={tickFormat}
         />
         <YLeft yScale={yScale} />
         <text className="x-axis-title" x={innerWidth / 2} y={innerHeight + 38}>

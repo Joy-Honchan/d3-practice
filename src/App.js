@@ -5,6 +5,7 @@ import Pie from "./Pie";
 import LineChart from "./lineChart";
 import { useState } from "react";
 import BtnPanel from "./BtnPanel";
+import ScatterPlot from "./ScatterPlot";
 
 export default function App() {
   const [now, setNow] = useState(0);
@@ -18,6 +19,8 @@ export default function App() {
         <Pie width="200" />
       ) : now === 3 ? (
         <LineChart width="350" height="200" />
+      ) : now === 4 ? (
+        <ScatterPlot width="350" height="200" />
       ) : (
         <Smile />
       )}

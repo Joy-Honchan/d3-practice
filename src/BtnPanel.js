@@ -2,7 +2,8 @@ const btnData = [
   { value: 0, label: "Smile" },
   { value: 1, label: "Interactive" },
   { value: 2, label: "Pie" },
-  { value: 3, label: "LineChart" }
+  { value: 3, label: "LineChart" },
+  { value: 4, label: "ScatterPlot" },
 ];
 
 export default function BtnPanel({ now, setNow }) {
